@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Saved Games-->
+        <scene sceneID="b0R-tc-soQ">
+            <objects>
+                <tableViewController storyboardIdentifier="SavedGamesTableViewController" id="CUW-yq-g2z" customClass="SavedGamesTableViewController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="bAm-W0-fP3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="savedGame" editingAccessoryType="detailDisclosureButton" rowHeight="55" id="Iw4-2l-RQX" customClass="SavedGameCell" customModule="Chess" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Iw4-2l-RQX" id="z3A-MS-ezu">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Game 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtJ-um-cUN">
+                                            <rect key="frame" x="15" y="17" width="57" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="GVF-fw-Ksz">
+                                            <rect key="frame" x="243" y="0.0" width="91" height="54.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-03-15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83D-Ky-5ic">
+                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:15 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-WM-D0Q">
+                                                    <rect key="frame" x="28" y="27.5" width="63" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GVF-fw-Ksz" secondAttribute="trailing" id="cwM-mE-2ga"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="ZtJ-um-cUN" secondAttribute="leading" id="jg6-8H-I19"/>
+                                        <constraint firstItem="GVF-fw-Ksz" firstAttribute="centerY" secondItem="z3A-MS-ezu" secondAttribute="centerY" id="oIg-gj-Mfj"/>
+                                        <constraint firstItem="GVF-fw-Ksz" firstAttribute="height" secondItem="z3A-MS-ezu" secondAttribute="height" id="wOt-Gg-QHq"/>
+                                        <constraint firstItem="ZtJ-um-cUN" firstAttribute="centerY" secondItem="z3A-MS-ezu" secondAttribute="centerY" id="xdy-dj-2qJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="83D-Ky-5ic" id="TnR-fF-9oP"/>
+                                    <outlet property="gameNumberLabel" destination="ZtJ-um-cUN" id="NqD-vr-b6w"/>
+                                    <outlet property="timeLabel" destination="4KN-WM-D0Q" id="9Pb-vM-c74"/>
+                                    <segue destination="adL-8r-9au" kind="show" identifier="ChessGameViewController" id="AGV-85-hSq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CUW-yq-g2z" id="sd6-vY-c3C"/>
+                            <outlet property="delegate" destination="CUW-yq-g2z" id="NgQ-3p-NvP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Saved Games" prompt="Please select a game to resume." id="Epo-pz-FRW"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUF-we-2Fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314.39999999999998" y="31.934032983508249"/>
+        </scene>
+        <!--ChessGameViewController-->
+        <scene sceneID="ePt-Uy-m4h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChessGame" referencedIdentifier="ChessGameViewController" id="adL-8r-9au" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESV-uz-xlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="-108"/>
+        </scene>
+    </scenes>
+</document>
